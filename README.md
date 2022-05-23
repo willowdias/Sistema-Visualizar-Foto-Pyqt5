@@ -1,0 +1,1 @@
+# Sistema-Visualizar-Foto-Pyqt5
