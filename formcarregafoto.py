@@ -14,57 +14,149 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1563, 765)
+        Form.resize(1563, 907)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/iconegeral/icons/image.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/icone/icons/cil-camera.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Form.setWindowIcon(icon)
-        Form.setStyleSheet("QMessageBox QLabel{\n"
+        Form.setStyleSheet("QWidget{\n"
+"background-color: rgb(97, 97, 97);\n"
+"}\n"
+"\n"
+"QMessageBox QLabel{\n"
 "\n"
 "\n"
 "font: 22pt \"MS Shell Dlg 2\";\n"
-"    color: rgb(255, 0, 0);\n"
+"    color: white;\n"
 "\n"
 "}\n"
 "QMessageBox QPushButton{\n"
 "background-color: rgb(103, 255, 128);font: 87 14pt Arial;\n"
 "\n"
 "}\n"
-"")
+"QMenu::item {\n"
+"    padding: 2px 25px 2px 20px;\n"
+"    border: 1px solid transparent; /* reserve space for selection border */\n"
+"}")
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 5)
+        self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.frame_4 = QtWidgets.QFrame(Form)
+        self.frame_4.setStyleSheet("QPushButton{\n"
+"border:none;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: rgb(255, 170, 0);\n"
+"\n"
+"}")
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_4)
+        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_5.setSpacing(0)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.labe_icon_sobre = QtWidgets.QLabel(self.frame_4)
+        self.labe_icon_sobre.setText("")
+        self.labe_icon_sobre.setPixmap(QtGui.QPixmap(":/icone/icons/cil-camera.png"))
+        self.labe_icon_sobre.setObjectName("labe_icon_sobre")
+        self.horizontalLayout_5.addWidget(self.labe_icon_sobre)
+        self.label_3 = QtWidgets.QLabel(self.frame_4)
+        self.label_3.setStyleSheet("font: 16pt \"MS Shell Dlg 2\";\n"
+"color: rgb(255, 255, 255);")
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_5.addWidget(self.label_3)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem)
+        self.bt_maxmize = QtWidgets.QPushButton(self.frame_4)
+        self.bt_maxmize.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/icone/icons/cil-window-maximize.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.bt_maxmize.setIcon(icon1)
+        self.bt_maxmize.setIconSize(QtCore.QSize(40, 40))
+        self.bt_maxmize.setCheckable(True)
+        self.bt_maxmize.setObjectName("bt_maxmize")
+        self.horizontalLayout_5.addWidget(self.bt_maxmize)
+        self.bt_close = QtWidgets.QPushButton(self.frame_4)
+        self.bt_close.setText("")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/icone/icons/cil-x.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.bt_close.setIcon(icon2)
+        self.bt_close.setIconSize(QtCore.QSize(40, 40))
+        self.bt_close.setObjectName("bt_close")
+        self.horizontalLayout_5.addWidget(self.bt_close)
+        self.verticalLayout.addWidget(self.frame_4)
+        self.frame_menu = QtWidgets.QFrame(Form)
+        self.frame_menu.setStyleSheet("QPushButton{\n"
+"border:none;\n"
+"color:white;\n"
+"font: 14pt \"MS Shell Dlg 2\";\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: rgb(255, 170, 0);\n"
+"\n"
+"}")
+        self.frame_menu.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_menu.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_menu.setObjectName("frame_menu")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.frame_menu)
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_7.setSpacing(0)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.botao_menu = QtWidgets.QPushButton(self.frame_menu)
+        self.botao_menu.setMinimumSize(QtCore.QSize(180, 0))
+        self.botao_menu.setSizeIncrement(QtCore.QSize(0, 0))
+        self.botao_menu.setStyleSheet("text-align: left;\n"
+"\n"
+"padding:1px 25px;")
+        self.botao_menu.setObjectName("botao_menu")
+        self.horizontalLayout_7.addWidget(self.botao_menu)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_7.addItem(spacerItem1)
+        self.verticalLayout.addWidget(self.frame_menu)
         self.frame_3 = QtWidgets.QFrame(Form)
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_3)
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_4.setSpacing(0)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem)
         self.bt_visular_pasta = QtWidgets.QPushButton(self.frame_3)
         self.bt_visular_pasta.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.bt_visular_pasta.setFont(font)
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/iconegeral/icons/book_previous.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.bt_visular_pasta.setIcon(icon1)
+        self.bt_visular_pasta.setStyleSheet("\n"
+"\n"
+"QPushButton{\n"
+"color: rgb(255, 255, 255);\n"
+"border:none;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: rgb(255, 170, 0);\n"
+"\n"
+"}")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/icone/icons/cil-dialpad.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.bt_visular_pasta.setIcon(icon3)
         self.bt_visular_pasta.setIconSize(QtCore.QSize(60, 60))
         self.bt_visular_pasta.setCheckable(True)
         self.bt_visular_pasta.setObjectName("bt_visular_pasta")
         self.horizontalLayout_4.addWidget(self.bt_visular_pasta)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_4.addItem(spacerItem2)
         self.verticalLayout.addWidget(self.frame_3)
         self.frame_2 = QtWidgets.QFrame(Form)
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_2)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.label = QtWidgets.QLabel(self.frame_2)
-        self.label.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.label.setText("")
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
-        self.horizontalLayout_2.addWidget(self.label)
         self.frame_pastas = QtWidgets.QFrame(self.frame_2)
         self.frame_pastas.setMinimumSize(QtCore.QSize(0, 0))
         self.frame_pastas.setMaximumSize(QtCore.QSize(0, 16777215))
@@ -77,23 +169,112 @@ class Ui_Form(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.pasta = QtWidgets.QTreeView(self.frame_pastas)
         self.pasta.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.pasta.setStyleSheet("background-color: rgb(209, 209, 209);\n"
+"font: 12pt \"MS Shell Dlg 2\";\n"
+"                        \n"
+"color: rgb(51, 153, 153);\n"
+"                               alternate-background-color: black;\n"
+"                                    border-style: solid;\n"
+"                                    border-color: rgb(0, 153, 255);\n"
+"                             \n"
+"                     ")
         self.pasta.setObjectName("pasta")
-        self.pasta.header().setDefaultSectionSize(450)
+        self.pasta.header().setDefaultSectionSize(250)
         self.horizontalLayout_3.addWidget(self.pasta)
         self.horizontalLayout_2.addWidget(self.frame_pastas)
+        self.label = QtWidgets.QLabel(self.frame_2)
+        self.label.setMinimumSize(QtCore.QSize(1080, 0))
+        self.label.setMaximumSize(QtCore.QSize(1080, 800))
+        self.label.setStyleSheet("image: url(:/icone/icons/cil-4k.png);\n"
+"background-color: rgb(199, 199, 199);")
+        self.label.setText("")
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.horizontalLayout_2.addWidget(self.label)
+        self.line_5 = QtWidgets.QFrame(self.frame_2)
+        self.line_5.setFrameShape(QtWidgets.QFrame.VLine)
+        self.line_5.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_5.setObjectName("line_5")
+        self.horizontalLayout_2.addWidget(self.line_5)
+        self.frame_6 = QtWidgets.QFrame(self.frame_2)
+        self.frame_6.setMinimumSize(QtCore.QSize(250, 0))
+        self.frame_6.setMaximumSize(QtCore.QSize(250, 16777215))
+        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_6)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.line_with = QtWidgets.QLineEdit(self.frame_6)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.line_with.setFont(font)
+        self.line_with.setAlignment(QtCore.Qt.AlignCenter)
+        self.line_with.setObjectName("line_with")
+        self.verticalLayout_2.addWidget(self.line_with)
+        self.line_2 = QtWidgets.QFrame(self.frame_6)
+        self.line_2.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_2.setObjectName("line_2")
+        self.verticalLayout_2.addWidget(self.line_2)
+        self.line_heigt = QtWidgets.QLineEdit(self.frame_6)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.line_heigt.setFont(font)
+        self.line_heigt.setAlignment(QtCore.Qt.AlignCenter)
+        self.line_heigt.setObjectName("line_heigt")
+        self.verticalLayout_2.addWidget(self.line_heigt)
+        self.line_3 = QtWidgets.QFrame(self.frame_6)
+        self.line_3.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_3.setObjectName("line_3")
+        self.verticalLayout_2.addWidget(self.line_3)
+        self.bt_salvar_foto = QtWidgets.QPushButton(self.frame_6)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.bt_salvar_foto.setFont(font)
+        self.bt_salvar_foto.setStyleSheet("\n"
+"\n"
+"QPushButton{\n"
+"color: rgb(255, 255, 255);\n"
+"border:none;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: rgb(255, 170, 0);\n"
+"\n"
+"}")
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/icone/icons/cil-save.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.bt_salvar_foto.setIcon(icon4)
+        self.bt_salvar_foto.setIconSize(QtCore.QSize(60, 60))
+        self.bt_salvar_foto.setObjectName("bt_salvar_foto")
+        self.verticalLayout_2.addWidget(self.bt_salvar_foto)
+        self.line_4 = QtWidgets.QFrame(self.frame_6)
+        self.line_4.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_4.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_4.setObjectName("line_4")
+        self.verticalLayout_2.addWidget(self.line_4)
+        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem3)
+        self.horizontalLayout_2.addWidget(self.frame_6)
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem4)
         self.verticalLayout.addWidget(self.frame_2)
         self.frame = QtWidgets.QFrame(Form)
+        self.frame.setMinimumSize(QtCore.QSize(0, 0))
         self.frame.setMaximumSize(QtCore.QSize(16777215, 50))
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.lineEdit = QtWidgets.QLineEdit(self.frame)
         self.lineEdit.setMinimumSize(QtCore.QSize(0, 40))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.lineEdit.setFont(font)
+        self.lineEdit.setStyleSheet("color: rgb(255, 255, 255);")
         self.lineEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit.setObjectName("lineEdit")
         self.horizontalLayout.addWidget(self.lineEdit)
@@ -103,25 +284,74 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(18)
         self.bt_Visualisar.setFont(font)
-        self.bt_Visualisar.setStyleSheet("")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/iconegeral/icons/accept.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.bt_Visualisar.setIcon(icon2)
+        self.bt_Visualisar.setStyleSheet("\n"
+"\n"
+"QPushButton{\n"
+"color: rgb(255, 255, 255);\n"
+"border:none;}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color: rgb(255, 170, 0);\n"
+"\n"
+"}\n"
+"")
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/icone/icons/cil-chevron-bottom.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.bt_Visualisar.setIcon(icon5)
         self.bt_Visualisar.setIconSize(QtCore.QSize(60, 60))
         self.bt_Visualisar.setObjectName("bt_Visualisar")
         self.horizontalLayout.addWidget(self.bt_Visualisar)
         self.verticalLayout.addWidget(self.frame)
+        self.frame_5 = QtWidgets.QFrame(Form)
+        self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.frame_5)
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.line = QtWidgets.QFrame(self.frame_5)
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        self.line.setFont(font)
+        self.line.setStyleSheet("")
+        self.line.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.line.setLineWidth(1)
+        self.line.setMidLineWidth(15)
+        self.line.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line.setObjectName("line")
+        self.horizontalLayout_6.addWidget(self.line)
+        self.verticalLayout.addWidget(self.frame_5)
+        self.actionSalva = QtWidgets.QAction(Form)
+        self.actionSalva.setIcon(icon4)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.actionSalva.setFont(font)
+        self.actionSalva.setObjectName("actionSalva")
+        self.actionNovo = QtWidgets.QAction(Form)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(":/icone/icons/cil-user-follow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionNovo.setIcon(icon6)
+        self.actionNovo.setObjectName("actionNovo")
 
         self.retranslateUi(Form)
+        self.bt_close.clicked.connect(Form.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Carregar Fotos"))
+        self.label_3.setText(_translate("Form", "Sistema Carregamento Fotos"))
+        self.botao_menu.setText(_translate("Form", "Arquivo"))
         self.bt_visular_pasta.setText(_translate("Form", "View Path"))
+        self.line_with.setPlaceholderText(_translate("Form", "Width"))
+        self.line_heigt.setPlaceholderText(_translate("Form", "Heigth"))
+        self.bt_salvar_foto.setText(_translate("Form", "Save"))
         self.lineEdit.setToolTip(_translate("Form", "copy and paste path / Copie e cole aqui caminho"))
         self.lineEdit.setPlaceholderText(_translate("Form", "Copy and paste path"))
         self.bt_Visualisar.setText(_translate("Form", "View"))
+        self.actionSalva.setText(_translate("Form", "Salva"))
+        self.actionSalva.setToolTip(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">Salva</span></p></body></html>"))
+        self.actionNovo.setText(_translate("Form", "Novo"))
+        self.actionNovo.setToolTip(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">Novo</span></p></body></html>"))
 import iconesform_rc
 
 

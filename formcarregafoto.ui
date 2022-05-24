@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1563</width>
-    <height>765</height>
+    <height>907</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,34 +15,101 @@
   </property>
   <property name="windowIcon">
    <iconset resource="../iconeformcarregarfoto/iconesform.qrc">
-    <normaloff>:/iconegeral/icons/image.png</normaloff>:/iconegeral/icons/image.png</iconset>
+    <normaloff>:/icone/icons/cil-camera.png</normaloff>:/icone/icons/cil-camera.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMessageBox QLabel{
+   <string notr="true">QWidget{
+background-color: rgb(97, 97, 97);
+}
+
+QMessageBox QLabel{
 
 
 font: 22pt &quot;MS Shell Dlg 2&quot;;
-	color: rgb(255, 0, 0);
+	color: white;
 
 }
 QMessageBox QPushButton{
 background-color: rgb(103, 255, 128);font: 87 14pt Arial;
 
 }
-</string>
+QMenu::item {
+    padding: 2px 25px 2px 20px;
+    border: 1px solid transparent; /* reserve space for selection border */
+}</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>5</number>
+   </property>
    <item>
-    <widget class="QFrame" name="frame_3">
+    <widget class="QFrame" name="frame_4">
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:none;}
+
+QPushButton:hover{
+background-color: rgb(255, 170, 0);
+
+}</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
-       <spacer name="horizontalSpacer">
+       <widget class="QLabel" name="labe_icon_sobre">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="../iconeformcarregarfoto/iconesform.qrc">:/icone/icons/cil-camera.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Sistema Carregamento Fotos</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -54,6 +121,147 @@ background-color: rgb(103, 255, 128);font: 87 14pt Arial;
         </property>
        </spacer>
       </item>
+      <item>
+       <widget class="QPushButton" name="bt_maxmize">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../iconeformcarregarfoto/iconesform.qrc">
+          <normaloff>:/icone/icons/cil-window-maximize.png</normaloff>:/icone/icons/cil-window-maximize.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bt_close">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../iconeformcarregarfoto/iconesform.qrc">
+          <normaloff>:/icone/icons/cil-x.png</normaloff>:/icone/icons/cil-x.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame_menu">
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border:none;
+color:white;
+font: 14pt &quot;MS Shell Dlg 2&quot;;
+
+}
+
+QPushButton:hover{
+background-color: rgb(255, 170, 0);
+
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="botao_menu">
+        <property name="minimumSize">
+         <size>
+          <width>180</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="sizeIncrement">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">text-align: left;
+
+padding:1px 25px;</string>
+        </property>
+        <property name="text">
+         <string>Arquivo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame_3">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
        <widget class="QPushButton" name="bt_visular_pasta">
         <property name="minimumSize">
@@ -67,12 +275,24 @@ background-color: rgb(103, 255, 128);font: 87 14pt Arial;
           <pointsize>16</pointsize>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">
+
+QPushButton{
+color: rgb(255, 255, 255);
+border:none;}
+
+QPushButton:hover{
+background-color: rgb(255, 170, 0);
+
+}</string>
+        </property>
         <property name="text">
          <string>View Path</string>
         </property>
         <property name="icon">
          <iconset resource="../iconeformcarregarfoto/iconesform.qrc">
-          <normaloff>:/iconegeral/icons/book_previous.png</normaloff>:/iconegeral/icons/book_previous.png</iconset>
+          <normaloff>:/icone/icons/cil-dialpad.png</normaloff>:/icone/icons/cil-dialpad.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -84,6 +304,19 @@ background-color: rgb(103, 255, 128);font: 87 14pt Arial;
          <bool>true</bool>
         </property>
        </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
      </layout>
     </widget>
@@ -97,19 +330,21 @@ background-color: rgb(103, 255, 128);font: 87 14pt Arial;
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
        <widget class="QFrame" name="frame_pastas">
         <property name="minimumSize">
@@ -154,19 +389,204 @@ background-color: rgb(103, 255, 128);font: 87 14pt Arial;
              <height>16777215</height>
             </size>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(209, 209, 209);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+                        
+color: rgb(51, 153, 153);
+                               alternate-background-color: black;
+                                    border-style: solid;
+                                    border-color: rgb(0, 153, 255);
+                             
+                     </string>
+           </property>
            <attribute name="headerDefaultSectionSize">
-            <number>450</number>
+            <number>250</number>
            </attribute>
           </widget>
          </item>
         </layout>
        </widget>
       </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="minimumSize">
+         <size>
+          <width>1080</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1080</width>
+          <height>800</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/icone/icons/cil-4k.png);
+background-color: rgb(199, 199, 199);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line_5">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_6">
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLineEdit" name="line_with">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Width</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="line_heigt">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Heigth</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="bt_salvar_foto">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+
+QPushButton{
+color: rgb(255, 255, 255);
+border:none;}
+
+QPushButton:hover{
+background-color: rgb(255, 170, 0);
+
+}</string>
+           </property>
+           <property name="text">
+            <string>Save</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../iconeformcarregarfoto/iconesform.qrc">
+             <normaloff>:/icone/icons/cil-save.png</normaloff>:/icone/icons/cil-save.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>60</width>
+             <height>60</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
      </layout>
     </widget>
    </item>
    <item>
     <widget class="QFrame" name="frame">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="maximumSize">
       <size>
        <width>16777215</width>
@@ -180,6 +600,21 @@ background-color: rgb(103, 255, 128);font: 87 14pt Arial;
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
       <item>
        <widget class="QLineEdit" name="lineEdit">
         <property name="minimumSize">
@@ -195,6 +630,9 @@ background-color: rgb(103, 255, 128);font: 87 14pt Arial;
         </property>
         <property name="toolTip">
          <string>copy and paste path / Copie e cole aqui caminho</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -224,14 +662,24 @@ background-color: rgb(103, 255, 128);font: 87 14pt Arial;
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">
+
+QPushButton{
+color: rgb(255, 255, 255);
+border:none;}
+
+QPushButton:hover{
+background-color: rgb(255, 170, 0);
+
+}
+</string>
         </property>
         <property name="text">
          <string>View</string>
         </property>
         <property name="icon">
          <iconset resource="../iconeformcarregarfoto/iconesform.qrc">
-          <normaloff>:/iconegeral/icons/accept.png</normaloff>:/iconegeral/icons/accept.png</iconset>
+          <normaloff>:/icone/icons/cil-chevron-bottom.png</normaloff>:/icone/icons/cil-chevron-bottom.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -244,10 +692,92 @@ background-color: rgb(103, 255, 128);font: 87 14pt Arial;
      </layout>
     </widget>
    </item>
+   <item>
+    <widget class="QFrame" name="frame_5">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="Line" name="line">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="midLineWidth">
+         <number>15</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
   </layout>
+  <action name="actionSalva">
+   <property name="icon">
+    <iconset resource="../iconeformcarregarfoto/iconesform.qrc">
+     <normaloff>:/icone/icons/cil-save.png</normaloff>:/icone/icons/cil-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salva</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Salva&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionNovo">
+   <property name="icon">
+    <iconset resource="../iconeformcarregarfoto/iconesform.qrc">
+     <normaloff>:/icone/icons/cil-user-follow.png</normaloff>:/icone/icons/cil-user-follow.png</iconset>
+   </property>
+   <property name="text">
+    <string>Novo</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Novo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="../iconeformcarregarfoto/iconesform.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>bt_close</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1521</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>781</x>
+     <y>382</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
