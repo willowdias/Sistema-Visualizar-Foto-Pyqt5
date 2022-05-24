@@ -48,6 +48,9 @@ class Ui_Form(object):
 "QPushButton:hover{\n"
 "background-color: rgb(255, 170, 0);\n"
 "\n"
+"}\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(0, 137, 206);\n"
 "}")
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -69,20 +72,30 @@ class Ui_Form(object):
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_5.addItem(spacerItem)
         self.bt_maxmize = QtWidgets.QPushButton(self.frame_4)
+        self.bt_maxmize.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.bt_maxmize.setFocusPolicy(QtCore.Qt.NoFocus)
         self.bt_maxmize.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(":/icone/icons/cil-window-maximize.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.bt_maxmize.setIcon(icon1)
         self.bt_maxmize.setIconSize(QtCore.QSize(40, 40))
         self.bt_maxmize.setCheckable(True)
+        self.bt_maxmize.setAutoDefault(False)
+        self.bt_maxmize.setFlat(True)
         self.bt_maxmize.setObjectName("bt_maxmize")
         self.horizontalLayout_5.addWidget(self.bt_maxmize)
         self.bt_close = QtWidgets.QPushButton(self.frame_4)
+        self.bt_close.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.bt_close.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.bt_close.setAutoFillBackground(False)
         self.bt_close.setText("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(":/icone/icons/cil-x.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.bt_close.setIcon(icon2)
         self.bt_close.setIconSize(QtCore.QSize(40, 40))
+        self.bt_close.setAutoDefault(False)
+        self.bt_close.setDefault(False)
+        self.bt_close.setFlat(False)
         self.bt_close.setObjectName("bt_close")
         self.horizontalLayout_5.addWidget(self.bt_close)
         self.verticalLayout.addWidget(self.frame_4)
@@ -108,9 +121,12 @@ class Ui_Form(object):
         self.botao_menu = QtWidgets.QPushButton(self.frame_menu)
         self.botao_menu.setMinimumSize(QtCore.QSize(180, 0))
         self.botao_menu.setSizeIncrement(QtCore.QSize(0, 0))
+        self.botao_menu.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.botao_menu.setFocusPolicy(QtCore.Qt.NoFocus)
         self.botao_menu.setStyleSheet("text-align: left;\n"
 "\n"
 "padding:1px 25px;")
+        self.botao_menu.setFlat(True)
         self.botao_menu.setObjectName("botao_menu")
         self.horizontalLayout_7.addWidget(self.botao_menu)
         spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -124,30 +140,6 @@ class Ui_Form(object):
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_4.setSpacing(0)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.bt_visular_pasta = QtWidgets.QPushButton(self.frame_3)
-        self.bt_visular_pasta.setMinimumSize(QtCore.QSize(0, 40))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.bt_visular_pasta.setFont(font)
-        self.bt_visular_pasta.setStyleSheet("\n"
-"\n"
-"QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"border:none;}\n"
-"\n"
-"QPushButton:hover{\n"
-"background-color: rgb(255, 170, 0);\n"
-"\n"
-"}")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/icone/icons/cil-dialpad.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.bt_visular_pasta.setIcon(icon3)
-        self.bt_visular_pasta.setIconSize(QtCore.QSize(60, 60))
-        self.bt_visular_pasta.setCheckable(True)
-        self.bt_visular_pasta.setObjectName("bt_visular_pasta")
-        self.horizontalLayout_4.addWidget(self.bt_visular_pasta)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_4.addItem(spacerItem2)
         self.verticalLayout.addWidget(self.frame_3)
         self.frame_2 = QtWidgets.QFrame(Form)
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -183,9 +175,9 @@ class Ui_Form(object):
         self.horizontalLayout_3.addWidget(self.pasta)
         self.horizontalLayout_2.addWidget(self.frame_pastas)
         self.label = QtWidgets.QLabel(self.frame_2)
-        self.label.setMinimumSize(QtCore.QSize(1080, 0))
-        self.label.setMaximumSize(QtCore.QSize(1080, 800))
-        self.label.setStyleSheet("image: url(:/icone/icons/cil-4k.png);\n"
+        self.label.setMinimumSize(QtCore.QSize(0, 0))
+        self.label.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.label.setStyleSheet("\n"
 "background-color: rgb(199, 199, 199);")
         self.label.setText("")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
@@ -204,10 +196,20 @@ class Ui_Form(object):
         self.frame_6.setObjectName("frame_6")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_6)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.label_4 = QtWidgets.QLabel(self.frame_6)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_4.setObjectName("label_4")
+        self.verticalLayout_2.addWidget(self.label_4)
         self.line_with = QtWidgets.QLineEdit(self.frame_6)
         font = QtGui.QFont()
         font.setPointSize(14)
         self.line_with.setFont(font)
+        self.line_with.setStyleSheet("background-color: rgb(200, 200, 200);")
+        self.line_with.setMaxLength(4)
         self.line_with.setAlignment(QtCore.Qt.AlignCenter)
         self.line_with.setObjectName("line_with")
         self.verticalLayout_2.addWidget(self.line_with)
@@ -216,10 +218,20 @@ class Ui_Form(object):
         self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_2.setObjectName("line_2")
         self.verticalLayout_2.addWidget(self.line_2)
+        self.label_2 = QtWidgets.QLabel(self.frame_6)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout_2.addWidget(self.label_2)
         self.line_heigt = QtWidgets.QLineEdit(self.frame_6)
         font = QtGui.QFont()
         font.setPointSize(14)
         self.line_heigt.setFont(font)
+        self.line_heigt.setStyleSheet("background-color: rgb(200, 200, 200);")
+        self.line_heigt.setMaxLength(4)
         self.line_heigt.setAlignment(QtCore.Qt.AlignCenter)
         self.line_heigt.setObjectName("line_heigt")
         self.verticalLayout_2.addWidget(self.line_heigt)
@@ -228,36 +240,74 @@ class Ui_Form(object):
         self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_3.setObjectName("line_3")
         self.verticalLayout_2.addWidget(self.line_3)
-        self.bt_salvar_foto = QtWidgets.QPushButton(self.frame_6)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.bt_salvar_foto.setFont(font)
-        self.bt_salvar_foto.setStyleSheet("\n"
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem2)
+        self.groupBox = QtWidgets.QGroupBox(self.frame_6)
+        self.groupBox.setStyleSheet("QGroupBox{\n"
+"color:white;\n"
+"    font: 14pt \"MS Shell Dlg 2\";\n"
+"text-align: center;\n"
+"}\n"
+"QRadioButton{\n"
+"font: 14pt \"MS Shell Dlg 2\";\n"
+"color:white;\n"
+"}\n"
+"QRadioButton::indicator {\n"
+"    width: 26px;\n"
+"    height: 20px;\n"
+"}\n"
 "\n"
-"QPushButton{\n"
-"color: rgb(255, 255, 255);\n"
-"border:none;}\n"
+"QRadioButton::indicator::unchecked {\n"
+"   \n"
+"    image: url(:/icone/icons/exti.png);\n"
+"}\n"
 "\n"
-"QPushButton:hover{\n"
-"background-color: rgb(255, 170, 0);\n"
+"QRadioButton::indicator:unchecked:hover {\n"
+"    \n"
+"    image: url(:/icone/icons/cil-check-circle.png);\n"
+"}\n"
 "\n"
+"\n"
+"\n"
+"QRadioButton::indicator::checked {\n"
+"  \n"
+"    image: url(:/icone/icons/cil-check-circle.png);\n"
+"    \n"
+"    \n"
+"    background-color: rgb(74, 74, 74);\n"
+"    border-radius: 6px;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"QRadioButton::indicator:checked:pressed {\n"
+"    \n"
+"    image: url(:/icone/icons/cil-hand-point-up.png);\n"
 "}")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/icone/icons/cil-save.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.bt_salvar_foto.setIcon(icon4)
-        self.bt_salvar_foto.setIconSize(QtCore.QSize(60, 60))
-        self.bt_salvar_foto.setObjectName("bt_salvar_foto")
-        self.verticalLayout_2.addWidget(self.bt_salvar_foto)
-        self.line_4 = QtWidgets.QFrame(self.frame_6)
-        self.line_4.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line_4.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line_4.setObjectName("line_4")
-        self.verticalLayout_2.addWidget(self.line_4)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem3)
+        self.groupBox.setAlignment(QtCore.Qt.AlignCenter)
+        self.groupBox.setObjectName("groupBox")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.groupBox)
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 1)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.button_png = QtWidgets.QRadioButton(self.groupBox)
+        self.button_png.setStyleSheet("")
+        self.button_png.setObjectName("button_png")
+        self.verticalLayout_3.addWidget(self.button_png)
+        self.button_jpg = QtWidgets.QRadioButton(self.groupBox)
+        self.button_jpg.setObjectName("button_jpg")
+        self.verticalLayout_3.addWidget(self.button_jpg)
+        self.button_icon = QtWidgets.QRadioButton(self.groupBox)
+        self.button_icon.setObjectName("button_icon")
+        self.verticalLayout_3.addWidget(self.button_icon)
+        self.button_jpeg = QtWidgets.QRadioButton(self.groupBox)
+        self.button_jpeg.setObjectName("button_jpeg")
+        self.verticalLayout_3.addWidget(self.button_jpeg)
+        self.button_bmp = QtWidgets.QRadioButton(self.groupBox)
+        self.button_bmp.setObjectName("button_bmp")
+        self.verticalLayout_3.addWidget(self.button_bmp)
+        self.verticalLayout_2.addWidget(self.groupBox)
         self.horizontalLayout_2.addWidget(self.frame_6)
-        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem4)
         self.verticalLayout.addWidget(self.frame_2)
         self.frame = QtWidgets.QFrame(Form)
         self.frame.setMinimumSize(QtCore.QSize(0, 0))
@@ -284,6 +334,8 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setPointSize(18)
         self.bt_Visualisar.setFont(font)
+        self.bt_Visualisar.setCursor(QtGui.QCursor(QtCore.Qt.WhatsThisCursor))
+        self.bt_Visualisar.setFocusPolicy(QtCore.Qt.NoFocus)
         self.bt_Visualisar.setStyleSheet("\n"
 "\n"
 "QPushButton{\n"
@@ -294,11 +346,15 @@ class Ui_Form(object):
 "background-color: rgb(255, 170, 0);\n"
 "\n"
 "}\n"
-"")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/icone/icons/cil-chevron-bottom.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.bt_Visualisar.setIcon(icon5)
+"\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(0, 137, 206);\n"
+"}")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/icone/icons/cil-chevron-bottom.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.bt_Visualisar.setIcon(icon3)
         self.bt_Visualisar.setIconSize(QtCore.QSize(60, 60))
+        self.bt_Visualisar.setFlat(True)
         self.bt_Visualisar.setObjectName("bt_Visualisar")
         self.horizontalLayout.addWidget(self.bt_Visualisar)
         self.verticalLayout.addWidget(self.frame)
@@ -321,37 +377,74 @@ class Ui_Form(object):
         self.horizontalLayout_6.addWidget(self.line)
         self.verticalLayout.addWidget(self.frame_5)
         self.actionSalva = QtWidgets.QAction(Form)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/icone/icons/cil-save.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.actionSalva.setIcon(icon4)
         font = QtGui.QFont()
-        font.setPointSize(12)
+        font.setPointSize(14)
         self.actionSalva.setFont(font)
         self.actionSalva.setObjectName("actionSalva")
         self.actionNovo = QtWidgets.QAction(Form)
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/icone/icons/cil-user-follow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.actionNovo.setIcon(icon6)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/icone/icons/cil-user-follow.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionNovo.setIcon(icon5)
         self.actionNovo.setObjectName("actionNovo")
+        self.actionSave_Pdf = QtWidgets.QAction(Form)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap(":/icone/icons/cil-transfer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionSave_Pdf.setIcon(icon6)
+        self.actionSave_Pdf.setObjectName("actionSave_Pdf")
+        self.actionMenu_Arquivo = QtWidgets.QAction(Form)
+        self.actionMenu_Arquivo.setCheckable(True)
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap(":/icone/icons/cil-menu.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap(":/icone/icons/cil-chevron-bottom.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.actionMenu_Arquivo.setIcon(icon7)
+        self.actionMenu_Arquivo.setShortcutContext(QtCore.Qt.ApplicationShortcut)
+        self.actionMenu_Arquivo.setObjectName("actionMenu_Arquivo")
+        self.labe_icon_sobre.setBuddy(self.labe_icon_sobre)
 
         self.retranslateUi(Form)
-        self.bt_close.clicked.connect(Form.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Form)
+        Form.setTabOrder(self.pasta, self.lineEdit)
+        Form.setTabOrder(self.lineEdit, self.bt_Visualisar)
+        Form.setTabOrder(self.bt_Visualisar, self.botao_menu)
+        Form.setTabOrder(self.botao_menu, self.bt_close)
+        Form.setTabOrder(self.bt_close, self.line_with)
+        Form.setTabOrder(self.line_with, self.bt_maxmize)
+        Form.setTabOrder(self.bt_maxmize, self.line_heigt)
+        Form.setTabOrder(self.line_heigt, self.button_png)
+        Form.setTabOrder(self.button_png, self.button_jpg)
+        Form.setTabOrder(self.button_jpg, self.button_icon)
+        Form.setTabOrder(self.button_icon, self.button_jpeg)
+        Form.setTabOrder(self.button_jpeg, self.button_bmp)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Carregar Fotos"))
         self.label_3.setText(_translate("Form", "Sistema Carregamento Fotos"))
         self.botao_menu.setText(_translate("Form", "Arquivo"))
-        self.bt_visular_pasta.setText(_translate("Form", "View Path"))
+        self.label_4.setText(_translate("Form", "Width"))
+        self.line_with.setText(_translate("Form", "1080"))
         self.line_with.setPlaceholderText(_translate("Form", "Width"))
+        self.label_2.setText(_translate("Form", "Height"))
+        self.line_heigt.setText(_translate("Form", "1080"))
         self.line_heigt.setPlaceholderText(_translate("Form", "Heigth"))
-        self.bt_salvar_foto.setText(_translate("Form", "Save"))
+        self.groupBox.setTitle(_translate("Form", "Form Photo"))
+        self.button_png.setText(_translate("Form", "PNG"))
+        self.button_jpg.setText(_translate("Form", "JPG"))
+        self.button_icon.setText(_translate("Form", "ICO"))
+        self.button_jpeg.setText(_translate("Form", "JPEG"))
+        self.button_bmp.setText(_translate("Form", "bmp"))
         self.lineEdit.setToolTip(_translate("Form", "copy and paste path / Copie e cole aqui caminho"))
         self.lineEdit.setPlaceholderText(_translate("Form", "Copy and paste path"))
         self.bt_Visualisar.setText(_translate("Form", "View"))
-        self.actionSalva.setText(_translate("Form", "Salva"))
-        self.actionSalva.setToolTip(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">Salva</span></p></body></html>"))
+        self.actionSalva.setText(_translate("Form", "Salva foto"))
+        self.actionSalva.setToolTip(_translate("Form", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
         self.actionNovo.setText(_translate("Form", "Novo"))
         self.actionNovo.setToolTip(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">Novo</span></p></body></html>"))
+        self.actionSave_Pdf.setText(_translate("Form", "Save Pdf"))
+        self.actionMenu_Arquivo.setText(_translate("Form", "Menu Arquivo"))
 import iconesform_rc
 
 
