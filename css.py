@@ -1,0 +1,5 @@
+menucss="""
+QMenu{background-color: rgb(97, 97, 97); text-align: center;font: 14pt MS Shell Dlg 2;}"
+        "QMenu::item {padding: 2px 25px 2px 20px;border: 1px solid transparent; /* reserve space for selection border */}"
+        "QMenu::item:selected {border-color: darkblue;background: rgba(100, 100, 100, 150)}"
+"""

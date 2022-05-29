@@ -16,6 +16,7 @@ from iconesform_rc import  *
 import time
 import datetime
 import json
+from css import*
 class carregarfoto(QDialog):#essa tela puxa os quarto
     def __init__(self):
         QDialog.__init__(self)
@@ -48,12 +49,13 @@ class carregarfoto(QDialog):#essa tela puxa os quarto
         self.ui.button_icon.clicked.connect(self.formato_image)
         self.ui.button_bmp.clicked.connect(self.formato_image)
         self.showMaximized()
-        #BOTOES DE FORMATO IMAGEM
+        ##deixa maisculo line edite
+        font = self.ui.lineEdit.font()
+        font.setCapitalization(True)
+        self.ui.lineEdit.setFont(font)
         #create menu 
         menu = QMenu()
-        menu.setStyleSheet("QMenu{background-color: rgb(97, 97, 97); text-align: center;font: 14pt MS Shell Dlg 2;}"
-        "QMenu::item {padding: 2px 25px 2px 20px;border: 1px solid transparent; /* reserve space for selection border */}"
-        "QMenu::item:selected {border-color: darkblue;background: rgba(100, 100, 100, 150)}")
+        menu.setStyleSheet(menucss)
        
         menu.setMinimumWidth(150)
         menu.setMinimumHeight(250)
